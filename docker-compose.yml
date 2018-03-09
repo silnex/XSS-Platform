@@ -1,6 +1,6 @@
 version: '3'
 
-service:
+services:
   docker-php-selenium:
     build: ./
     container_name: php-webdriver
@@ -22,6 +22,8 @@ service:
 networks:
   XSS-Network:
     driver: bridge
-    config:
-      - subnet: 10.0.0.0/24
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/24
 
