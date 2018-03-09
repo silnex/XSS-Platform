@@ -1,0 +1,27 @@
+version: '3'
+
+service:
+  docker-php-selenium:
+    build: ./
+    container_name: php-webdriver
+    networks:
+      XSS-Network: {}
+    ports:
+      - "8080:80"
+    restart: always
+
+  selenium:
+    image: selenium/standalone-chrome:latest
+    container_name: selenium
+    networks:
+      XSS-Network: {}
+    expose:
+      - "4444"
+    restart: always
+
+networks:
+  XSS-Network:
+    driver: bridge
+    config:
+      - subnet: 10.0.0.0/24
+
