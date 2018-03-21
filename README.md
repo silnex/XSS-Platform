@@ -16,3 +16,7 @@
 or
 
 > http://localhost:8080/?XSS=g0x55&url={XSS_Link}&flag={flag}  
+
+
+### DEMO
+http://xss.silnex.kr/
