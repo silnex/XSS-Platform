@@ -1,5 +1,5 @@
 ## If you need to change PHP version for the 7.2, then you can change like this "php:7.2-apache"
-FROM php:7.0.27-apache
+FROM php:7.0.28-apache
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
